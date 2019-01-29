@@ -9,6 +9,7 @@ Just choose any of 8 styles and use it with your bootstrap project
 - SASS File Added
 - Bootstrap Latest Version V4+ Used
 - Mobile Navigation already created
+- Demo 7 is Mega Menu
 
 [![Live](https://img.shields.io/badge/Live%20-Link-brightgreen.svg)](https://codepen.io/hakik-zaman/full/aXZEQB)
 
