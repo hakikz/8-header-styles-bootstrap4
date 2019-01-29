@@ -1,0 +1,146 @@
+@mixin search_box2 {
+    .search-box{
+        #search-box2{
+            &::before{
+                content: '\f002';
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 900;
+                position: relative;
+                top: 0px;
+                left: 30px;
+                color: $primary-color;
+            }
+        }
+        
+        input {
+            outline: none;
+
+            &[type=search] {
+                -webkit-appearance: textfield;
+                -webkit-box-sizing: content-box;
+                font-family: inherit;
+                font-size: 100%;
+
+                // background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+                border: solid 1px #ccc;
+                padding: 9px 10px 9px 32px;
+                width: 55px;
+                
+                -webkit-border-radius: 10em;
+                -moz-border-radius: 10em;
+                border-radius: 10em;
+                
+                -webkit-transition: all .5s;
+                -moz-transition: all .5s;
+                transition: all .5s;
+            }
+
+            &::-webkit-search-decoration,
+            &::-webkit-search-cancel-button {
+                display: none; 
+            }
+
+            &:focus {
+                width: 130px;
+                background-color: #fff;
+                border-color: $primary-color;
+                
+                -webkit-box-shadow: 0 0 5px rgba(0, 105, 171,.5);
+                -moz-box-shadow: 0 0 5px rgba(0, 105, 171,.5);
+                box-shadow: 0 0 5px rgba(0, 105, 171,.5);
+                @include mQ(320px, 480px){
+                    width: 115px;
+                 }
+            }
+
+            &:-moz-placeholder {
+                color: #999;
+            }
+            &::-webkit-input-placeholder {
+                color: #999;
+            }
+            
+        }
+        
+    }
+}
+
+
+@mixin search_box {
+    /* Demo 2 */
+    #search_box{
+        &::before{
+            content: '\f002';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: relative;
+            top: 0px;
+            left: 32px;
+            color: $primary-color;
+        }
+        input[type=search] {
+            width: 22px;
+            padding-left: 10px;
+            color: transparent;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #fff;
+            }
+
+            &:focus {
+                width: 130px;
+                padding-left: 32px;
+                color: #000;
+                background-color: #fff;
+                cursor: auto;
+                @include mQ(320px, 480px){
+                   width: 115px;
+                }
+            }
+
+            &:-moz-placeholder {
+                color: transparent;
+            }
+
+            &::-webkit-input-placeholder {
+                color: transparent;
+            }
+        }
+    } 
+}
+
+
+@mixin badge {
+    .badge{
+        border-radius: 50%;
+        position: relative;
+        top: -10px;
+        left: -10px;
+    }
+}
+
+@mixin mQ($min, $max) {
+    @media screen and (min-width: $min) and (max-width: $max) {
+        @content;
+    }
+}
+
+@mixin nav {
+    .nav-wrapper {
+        width: 100%;
+        position: relative;
+        display: block;
+
+        .btn-nav {
+            display: block;
+            width: 100%;
+            padding: 0.5rem 1rem;
+            float: left;
+        }
+        .nav-content {
+            float: left;
+            width: 100%;
+        }
+    }
+}
